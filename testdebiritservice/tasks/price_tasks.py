@@ -8,7 +8,7 @@ from testdebiritservice.models.price import Price
 from settings import settings
 
 
-@celery_app.task(name="testdebiritservice.tasks.fetch_prices.fetch_prices")
+@celery_app.task(name="testdebiritservice.tasks.price_tasks.fetch_prices")
 def fetch_prices():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
