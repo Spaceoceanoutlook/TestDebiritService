@@ -12,4 +12,4 @@ COPY . .
 
 ENV PYTHONPATH=/app
 
-CMD ["uvicorn", "testdebiritservice.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "testderibitservice.main:app", "--host", "0.0.0.0", "--port", "8000"]

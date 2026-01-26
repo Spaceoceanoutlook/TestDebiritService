@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from testdebiritservice.api.routes import router
+from testderibitservice.api.routes import router
 
 app = FastAPI(title="Deribit Price Service")
 

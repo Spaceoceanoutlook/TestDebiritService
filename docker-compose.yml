@@ -2,7 +2,7 @@ services:
   api:
     build: .
     container_name: fastapi_app
-    command: uvicorn testdebiritservice.main:app --host 0.0.0.0 --port 8000
+    command: uvicorn testderibitservice.main:app --host 0.0.0.0 --port 8000
     ports:
       - "8000:8000"
     depends_on:
@@ -27,7 +27,7 @@ services:
   celery_worker:
     build: .
     container_name: celery_worker
-    command: celery -A testdebiritservice.celery worker --loglevel=info
+    command: celery -A testderibitservice.celery worker --loglevel=info
     depends_on:
       - redis
       - db
@@ -37,7 +37,7 @@ services:
   celery_beat:
     build: .
     container_name: celery_beat
-    command: celery -A testdebiritservice.celery beat --loglevel=info
+    command: celery -A testderibitservice.celery beat --loglevel=info
     depends_on:
       - redis
       - db

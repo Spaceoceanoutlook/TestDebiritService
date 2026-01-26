@@ -1,4 +1,4 @@
-from testdebiritservice.models import Base
+from testderibitservice.models import Base
 from sqlalchemy import String, Integer, Numeric, BigInteger
 from sqlalchemy.orm import Mapped, mapped_column
 from decimal import Decimal

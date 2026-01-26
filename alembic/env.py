@@ -4,7 +4,7 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 
 from alembic import context
-from testdebiritservice.models import Base
+from testderibitservice.models import Base
 from settings import settings
 
 

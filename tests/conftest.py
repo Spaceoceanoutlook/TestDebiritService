@@ -3,9 +3,9 @@ from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from testdebiritservice.main import app
-from testdebiritservice.database import get_db
-from testdebiritservice.models import Base
+from testderibitservice.main import app
+from testderibitservice.database import get_db
+from testderibitservice.models import Base
 
 
 engine = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False})

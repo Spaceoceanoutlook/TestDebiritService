@@ -71,7 +71,7 @@
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/Spaceoceanoutlook/TestDebiritService.git
+git clone https://github.com/Spaceoceanoutlook/TestDeribitService.git
 ```
 Открыть проект в редакторе, в корне проекта создать файл `.env` и добавить следующие переменные:
 ```

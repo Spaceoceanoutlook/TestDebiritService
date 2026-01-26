@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.orm import Session
 
-from testdebiritservice.database import get_db
-from testdebiritservice.models.price import Price
+from testderibitservice.database import get_db
+from testderibitservice.models.price import Price
 
 router = APIRouter(prefix="/prices", tags=["prices"])
 

@@ -1,14 +1,14 @@
 import asyncio
 import time
 
-from testdebiritservice.celery import celery_app
-from testdebiritservice.services.debirit_client import DebiritClient
-from testdebiritservice.database import SessionLocal
-from testdebiritservice.models.price import Price
+from testderibitservice.celery import celery_app
+from testderibitservice.services.deribit_client import DeribitClient
+from testderibitservice.database import SessionLocal
+from testderibitservice.models.price import Price
 from settings import settings
 
 
-@celery_app.task(name="testdebiritservice.tasks.price_tasks.fetch_prices")
+@celery_app.task(name="testderibitservice.tasks.price_tasks.fetch_prices")
 def fetch_prices():
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
@@ -17,7 +17,7 @@ def fetch_prices():
 
 
 async def _fetch_prices_async():
-    client = DebiritClient()
+    client = DeribitClient()
     db = SessionLocal()
 
     try:

@@ -1,7 +1,7 @@
 import time
 
 
-from testdebiritservice.models import Price
+from testderibitservice.models import Price
 
 
 def seed_prices(db_session):
