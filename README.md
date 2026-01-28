@@ -112,7 +112,7 @@ docker compose exec api alembic revision --autogenerate -m "init"
 docker compose exec api alembic upgrade head
 ```
 
-После старта сервиса каждую минуту в базе данных сохраняются текущие цены btc_usd и eth_usd с биржи debirit, получить их можно через API `http://127.0.0.1:8000/docs`
+После старта сервиса каждую минуту в базе данных сохраняются текущие цены btc_usd и eth_usd с биржи deribit, получить их можно через API `http://127.0.0.1:8000/docs`
 
 ## Design Decisions
 
