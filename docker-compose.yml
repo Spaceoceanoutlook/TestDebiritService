@@ -4,7 +4,7 @@ services:
     container_name: fastapi_app
     command: uvicorn testderibitservice.main:app --host 0.0.0.0 --port 8000
     ports:
-      - "8000:8000"
+      - "8010:8000"
     depends_on:
       - db
       - redis
@@ -12,11 +12,11 @@ services:
       - .env
 
   db:
-    image: postgres:15
+    image: postgres:18
     container_name: postgres_db
     env_file: .env
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql
 
   redis:
     image: redis:7

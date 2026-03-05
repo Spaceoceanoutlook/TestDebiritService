@@ -84,24 +84,7 @@ POSTGRES_DB=prices
 DERIBIT_BASE_URL=https://www.deribit.com/api/v2
 TICKERS=["btc_usd","eth_usd"]
 ```
-В системе должен быть установлен poetry
 
-Для корректной работы приложения, версия python должны быть < 3.14
-
-Если глобальная версия python >= 3.14, то установить 3.13.0 через pyenv, после чего выполнить
-```bash 
-poetry env use ~/.pyenv/versions/3.13.0/bin/python
-```
-
-Активировать виртуальное окружение:
-```bash 
-poetry env activate
-```
-
-Установка библиотек:
-```bash 
-poetry install
-```
 Запустить приложение
 ```bash 
 docker compose up --build -d
@@ -112,7 +95,7 @@ docker compose exec api alembic revision --autogenerate -m "init"
 docker compose exec api alembic upgrade head
 ```
 
-После старта сервиса каждую минуту в базе данных сохраняются текущие цены btc_usd и eth_usd с биржи deribit, получить их можно через API `http://127.0.0.1:8000/docs`
+После старта сервиса каждую минуту в базе данных сохраняются текущие цены btc_usd и eth_usd с биржи deribit, получить их можно через API `http://127.0.0.1:8010/docs`
 
 ## Design Decisions
 
